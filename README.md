@@ -4,7 +4,7 @@ Vagrantfile to run docker on a Mac
 To use:
 
 ```
-vagrant up && scp vagrant@192.168.33.2:*.pem $HOME/.docker/
+vagrant up && scp -o UserKnownHostsFile=/dev/null vagrant@192.168.33.2:*.pem $HOME/.docker/
 export DOCKER_HOST=tcp://192.168.33.2:2376 DOCKER_TLS_VERIFY="1"
 ```
 
