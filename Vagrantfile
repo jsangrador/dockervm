@@ -34,6 +34,7 @@ Vagrant.configure(2) do |config|
     chmod -v 0400 ca-key.pem key.pem server-key.pem
     chmod -v 0444 ca.pem server-cert.pem cert.pem
     sudo mv ca-key.pem server-key.pem server-cert.pem /
+    sudo cp ca.pem /
     sudo chown vagrant:vagrant key.pem cert.pem ca.pem # so we can scp them easily from the host
 
     # Configure docker daemon to listen on TCP, as per
